@@ -1,127 +1,290 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <title>Title</title>
-</head>
-<body>
-<table width="100%">
-    <tbody>
-    <tr valign="top">
-        <td>
-            <ul>
-                <li><a href="../account.html">Account</a></li>
-                <li><a href="#">Dashboard</a></li>
-                <li><a href="../courses.html">Courses</a></li>
-                <li><a href="#">Calendar</a></li>
-                <li><a href="#">Inbox</a></li>
-                <li><a href="#">History</a></li>
-                <li><a href="#">Studio</a></li>
-                <li><a href="#">Commons</a></li>
-                <li><a href="#">Help</a></li>
-            </ul>
-        </td>
 
-        <td>
-            <ul>
-                <li><a href="#">Notifications</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Files</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">ePortfolios</a></li>
-                <li><a href="#">Shared Content</a></li>
-                <li><a href="#">The Hub</a></li>
-                <li><a href="#">Quickly Course Tools</a></li>
-                <li><a href="#">Global Announcements</a></li>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/5f3a9d19bd.js"
+      crossorigin="anonymous"
+    ></script>
 
-            </ul>
-        </td>
+    <link href="../styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="wd-flex-row-container">
+      <div id="sidebar" class="bg-black min-vh-100">
+        <img
+          src="../../images/northeastern.png"
+          width="80px"
+          height="80px"
+          alt="Northeastern Logo N"
+        />
+        <ul class="">
+          <li class="wd-active">
+            <a id="accountLink" class="  " href="../account.html">
+              <div>
+                <i
+                  class="fa-regular fa-circle-user fa-2xl"
+                  style="color: #aaaaaa"
+                ></i>
+              </div>
+              Account
+            </a>
+          </li>
+          <li class="">
+            <a class="" href="../dashboard/dashboard.html">
+              <div>
+                <i class="fa-solid fa-gauge fa-2xl" style="color: #ff2600"></i>
+              </div>
+              Dashboard
+            </a>
+          </li>
+          <li class="">
+            <a class="" href="../courses.html">
+              <div>
+                <i class="fa-solid fa-book fa-2xl" style="color: #ff2600"></i>
+              </div>
+              Courses
+            </a>
+          </li>
+          <li class="">
+            <a class="" href="#">
+              <div>
+                <i
+                  class="fa-regular fa-calendar fa-2xl"
+                  style="color: #ff2600"
+                ></i>
+              </div>
+              Calendar</a
+            >
+          </li>
+          <li class="">
+            <a class="" href="#">
+              <div>
+                <i
+                  class="fa-solid fa-envelope-open-text fa-2xl"
+                  style="color: #ff2600"
+                ></i>
+              </div>
+              Inbox</a
+            >
+          </li>
+          <li class="">
+            <a class="" href="#">
+              <div>
+                <i
+                  class="fa-regular fa-clock fa-2xl"
+                  style="color: #ff2600"
+                ></i>
+              </div>
+              History</a
+            >
+          </li>
+          <li class="">
+            <a class="" href="#">
+              <div>
+                <i
+                  class="fa-solid fa-microchip fa-2xl"
+                  style="color: #ff2600"
+                ></i>
+              </div>
+              Studio</a
+            >
+          </li>
+          <li class="">
+            <a class="" href="#">
+              <div>
+                <i
+                  class="fa-solid fa-circle-arrow-right fa-2xl"
+                  style="color: #ff2600"
+                ></i>
+              </div>
+              Commons</a
+            >
+          </li>
+          <li class="">
+            <a class="" href="#">
+              <div>
+                <i
+                  class="fa-regular fa-circle-question fa-2xl"
+                  style="color: #ff2600"
+                ></i>
+              </div>
+              Help</a
+            >
+          </li>
+        </ul>
+      </div>
 
-        <td>
-            <h2>Jose Annunziato</h2>
+      <div id="profile" class="">
+        <div id="profile-header">
+          <i
+            id="hamburger-button"
+            class="fa-solid fa-bars fa-2xl"
+            style="color: #ff2600"
+          ></i>
 
-            <label>
-                Name:*<input value="Jose Annunziato" />
-            </label>
+          <h4 class="user-profile-title">Jose Annunziato's Profile</h4>
 
-            <label>
-                Pronouns:
-                <select>
-                    <option value="NONE" selected>None</option>
-                </select>
-            </label>
+          <hr />
+        </div>
 
-            <label>
-                Title:<input />
-            </label>
+        <ul id="account-navigator-list">
+          <li class="wd-account-nav-li">
+            <a class="wd-account-nav-link" href="#">Notifications</a>
+          </li>
+          <li class="wd-active-account-nav-li wd-account-nav-li">
+            <a
+              class="wd-active-account-nav-link wd-account-nav-link"
+              href="index.html"
+              >Profile</a
+            >
+          </li>
+          <li class="wd-account-nav-li">
+            <a class="wd-account-nav-link" href="#">Files</a>
+          </li>
+          <li class="wd-account-nav-li">
+            <a class="wd-account-nav-link" href="#">Settings</a>
+          </li>
+          <li class="wd-account-nav-li">
+            <a class="wd-account-nav-link" href="#">ePortfolios</a>
+          </li>
+          <li class="wd-account-nav-li">
+            <a class="wd-account-nav-link" href="#">Shared Content</a>
+          </li>
+          <li class="wd-account-nav-li">
+            <a class="wd-account-nav-link" href="#">The Hub</a>
+          </li>
+          <li class="wd-account-nav-li">
+            <a class="wd-account-nav-link" href="#">Quickly Course Tools</a>
+          </li>
+          <li class="wd-account-nav-li">
+            <a class="wd-account-nav-link" href="#">Global Announcements</a>
+          </li>
+        </ul>
 
-            <h3>Contact</h3>
-            <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
+        <span id="profile-content" class="">
+          <a
+            id="cancel-edit-profile-btn"
+            class="btn btn-light text-black"
+            href="./index.html"
+            role="button"
+          >
+            <i
+              class="fa-solid fa-pencil fa-flip-horizontal"
+              style="color: #919191"
+            ></i>
+            Cancel Editing
+          </a>
 
-            <h3>Contact</h3>
-            <p>No registered services, you can add some on the <a href="#">settings</a> page.</p>
+          <br />
 
-            <h3>Biography</h3>
-            <label>
-                Faculty, Software Engineer, AI, Space, and renewables enthusiast. <br />
-                <textarea cols="100%">Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea>
-            </label>
+          <i
+            id="profile-icon"
+            class="fa-solid fa-user fa-5x"
+            style="color: #919191; text-shadow: 0 0 2px #f0f0f0"
+          ></i>
 
-            <h3>Links</h3>
+          <br />
 
-            <ul>
-                <li><a href="#">YouTube Icon Links to an external site.</a></li>
-            </ul>
+          <label for="edit-profile-name-entry">Name:*</label>
+          <br />
+          <input
+            id="edit-profile-name-entry"
+            type="text"
+            class="form-control"
+            value="Jose Annunziato"
+          />
 
-            <table>
-                <thead>
-                <tr align="center">
-                    <td>
-                        Title
-                    </td>
-                    <td></td>
-                    <td>
-                        URL
-                    </td>
-                </tr>
-                </thead>
-                <form action="index.html">
-                    <tr>
-                        <td>
-                            <input value="YouTube"/>
-                        </td>
-                        <td>
-                            ->
-                        </td>
-                        <td>
-                            <input value="https://youtube.com" />
-                        </td>
-                        <td>
-                            <a href="#">Remove</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button type="button">Add another link</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button>Cancel</button>
-                            <button>Save Profile</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <button type="button">Edit Profile</button>
-                            <button>Cancel Editing</button>
-                        </td>
-                    </tr>
-                </form>
-            </table>
-        </td>
-    </tr>
-    </tbody>
-</table>
-</body>
+          <label for="edit-profile-pronouns">Pronouns:</label>
+          <br />
+          <div class="form-group">
+            <select id="edit-profile-pronouns" class="form-control">
+              <option value="None" selected>None</option>
+              <option value="He/Him/His">He/Him/His</option>
+            </select>
+          </div>
+
+          <br />
+
+          <label for="edit-profile-title">Title:</label>
+          <br />
+          <input id="edit-profile-title" class="form-control" />
+
+          <br />
+          <br />
+
+          <h3>Contact</h3>
+          <p>
+            No registered services, you can add some on the
+            <a href="#">settings</a> page
+          </p>
+
+          <h3>Biography</h3>
+          <textarea id="edit-profile-bio" class="form-control">
+Faculty, Software Engineer, AI, Space, and renewables enthusiast.</textarea
+          >
+
+          <h3>Links</h3>
+
+          <div id="links">
+            <div class="row">
+              <div class="col">Title</div>
+              <div class="col">URL</div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input type="text" value="YouTube" />
+              </div>
+              <div class="col">→</div>
+              <div class="col">
+                <input type="text" value="https://www.youtube.com/c/WebDevTV" />
+              </div>
+              <div class="col">
+                <i class="fa-solid fa-x" style="color: #ff2600"></i>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <a
+                  id="add-another-link-btn"
+                  class="btn btn-light text-black"
+                  href="#"
+                  >Add another link</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <hr />
+
+          <div id="save-profile-cancel-container">
+            <a
+              id="cancel-edit-button"
+              class="btn btn-light text-black"
+              href="index.html"
+              role="button"
+            >
+              Cancel
+            </a>
+            <a
+              id="save-profile-button"
+              class="btn btn-danger text-white"
+              href="index.html"
+              role="button"
+            >
+              Save Profile
+            </a>
+          </div>
+        </span>
+      </div>
+    </div>
+  </body>
 </html>

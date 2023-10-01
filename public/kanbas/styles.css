@@ -1,0 +1,305 @@
+.body {
+    margin: 0;
+    padding: 0;
+}
+
+.body * {
+    font-family: Arial, sans-serif;
+}
+
+#sidebar {
+    float: left;
+    width : 80px;
+    height: auto;
+}
+
+.wd-flex-row-container {
+    /*display: flex;*/
+    /*flex-direction: row;*/
+}
+
+#sidebar li {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    align-content: center;
+    text-align: center;
+
+}
+
+#sidebar a {
+    font-size: 0.8em;
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+#sidebar i {
+    margin-top: 7px;
+    margin-bottom: 7px;
+
+}
+
+#sidebar ul {
+    padding: 0;
+    list-style-type: none;
+
+}
+
+#sidebar li.wd-active {
+    background-color: white;
+}
+
+#sidebar li.wd-active a {
+    color: red;
+}
+
+
+
+
+
+
+
+
+
+/*
+account html css
+ */
+
+.account-navigator {
+    width: 100%;
+}
+
+#account-navigator-list {
+    list-style-type: none;
+
+}
+
+.wd-account-nav-li {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.wd-account-nav-link {
+    text-decoration: none;
+    text-underline: none;
+    margin-left: 8px;
+    color: red;
+}
+
+.wd-active-account-nav-link {
+    color: black;
+
+}
+
+.wd-active-account-nav-li {
+    color: black;
+    border-left: black;
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+
+
+/*
+Profile
+ */
+
+#profile {
+    margin-left: 60px;
+    padding: 10px;
+}
+
+#profile-icon {
+    font-size: 100pt;
+    border: gray 1px solid;
+    border-radius: 50%;
+    padding: 22px;
+}
+
+#profile-header {
+    padding-top: 10px;
+    padding-left: 40px;
+    align-content: center;
+}
+
+#hamburger-button {
+    padding-right: 20px;
+}
+
+#profile-header h4 {
+    display: inline;
+}
+
+#account-navigator-list {
+    float: left;
+    display: inline;
+    width: 200px;
+}
+
+#account-navigator-list li {
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+#profile-content {
+    float: left;
+    margin-top: 20px;
+    margin-left: 40px;
+    min-width: 600px; /* PROFILE WIDTH MINIMUM VAL keyword spam in case I need to debug */
+}
+
+#profile-content a {
+    color: red;
+    text-decoration: none;
+}
+
+#edit-profile-btn {
+    float: right;
+}
+
+#edit-profile-name-entry {
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+#edit-profile-pronouns {
+    width: 50%;
+    margin-bottom: 10px;
+}
+
+#edit-profile-title {
+    width: 50%;
+}
+
+#edit-profile-bio {
+    margin-bottom: 20px;
+    width: 50%;
+    height: 100px;
+    display: block;
+}
+
+
+
+
+
+
+
+/*
+edit profile page
+ */
+
+#cancel-edit-profile-btn {
+    float: right;
+}
+
+#save-profile-cancel-container {
+    float: right;
+}
+
+
+/*
+dashboard
+ */
+#dashboard-courses-container {
+
+}
+
+#dashboard-header {
+    padding-left: 90px;
+}
+
+#dashboard-subheader {
+    padding-left: 100px;
+}
+
+.wd-card-img {
+    height: 150px;
+    width: 248px;
+}
+
+.wd-dashboard-course-card {
+    margin: 15px;
+}
+
+
+
+/*
+home screen
+ */
+
+#course-navigator {
+    margin: 0;
+    margin-left: 50px;
+}
+
+#course-navigator-list {
+    list-style: none;
+    width: 200px;
+    height: 100%;
+
+}
+
+
+.wd-active-course-nav-li {
+    color: black;
+    border-left: black;
+    border-left-width: 2px;
+    border-left-style: solid;
+}
+
+.wd-course-nav-link {
+    text-decoration: none;
+    margin-left: 8px;
+    color: red;
+}
+
+.wd-course-nav-li {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#course-modules-table {
+    max-width: 60%;
+}
+
+#course-modules-list {
+    list-style: none;
+    border-left: 5px solid green;
+}
+
+#course-modules-table ul li a {
+    text-decoration: none;
+    color: red;
+}
+
+
+
+
+/*
+Assignment Page
+ */
+
+
+#assignments-table {
+    max-width: 600px;
+}
+
+#assignments-list {
+    list-style: none;
+    border-left: 5px solid green;
+}
+
+#assignments-table ul li a {
+    text-decoration: none;
+    color: red;
+}
+
+#search-asignment-name-entry {
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+
+
+
