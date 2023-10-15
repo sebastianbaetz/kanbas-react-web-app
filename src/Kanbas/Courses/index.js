@@ -1,6 +1,5 @@
 import db from "../../Kanbas/Database";
 import { Link, Navigate, useParams } from "react-router-dom";
-import "https://kit.fontawesome.com/5f3a9d19bd.js";
 import { Route, Routes } from "react-router";
 import CourseNavigation from "./CourseNavigation";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,6 +8,7 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import "./index.css";
+import { FaBars } from "react-icons/fa6";
 
 function Courses() {
   const pathName = window.location.href.split("/").pop();
@@ -18,7 +18,9 @@ function Courses() {
     <div className={"mt-4 mx-4"}>
       <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
-          <i className="pt-2 fa-solid fa-bars fa-xl text-danger d-inline px-2 "></i>
+          <div className={"d-inline px-2"}>
+            <FaBars className={"fa-xl text-danger"}></FaBars>
+          </div>
           <li className="breadcrumb-item d-inline px-2 text-danger">
             <Link to="Home">
               {course.number} {course._id}

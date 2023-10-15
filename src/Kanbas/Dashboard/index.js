@@ -32,10 +32,11 @@ function Dashboard() {
                     colors[index % colors.length]
                   }`}
                 >
-                  <FaEllipsisVertical
-                    className={"fa-xl text-white float-end px-3 py-4"}
-                  ></FaEllipsisVertical>
-                  {/*TODO NOT SHOWINGUP*/}
+                  <div className={"float-end px-3 py-4"}>
+                    <FaEllipsisVertical
+                      className={"fa-xl text-white "}
+                    ></FaEllipsisVertical>
+                  </div>
                 </div>
                 <div className={"card-body"}>
                   <h6 className={"card-title"}>{course.number}</h6>
