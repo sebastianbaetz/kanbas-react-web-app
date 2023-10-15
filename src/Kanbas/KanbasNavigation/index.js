@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "https://kit.fontawesome.com/5f3a9d19bd.js";
+//import "https://kit.fontawesome.com/5f3a9d19bd.js";
 import "./index.css";
 
 function KanbasNavigation() {
