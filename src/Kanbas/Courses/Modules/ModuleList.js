@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import db from "../../Database";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "https://kit.fontawesome.com/5f3a9d19bd.js";
+import { FaCircleCheck, FaEllipsisVertical, FaPlus } from "react-icons/fa6";
 
 function ModuleList() {
   const { courseId } = useParams();
@@ -15,7 +15,6 @@ function ModuleList() {
             <div className={"align-items-end"}>
               <button className="btn btn-light ">Collapse All</button>
               <button className="btn btn-light ">View Progress</button>
-
               <div className="dropdown d-inline">
                 <button
                   className={"btn dropdown-toggle btn-light "}
@@ -25,9 +24,7 @@ function ModuleList() {
                   aria-haspopup="true"
                   aria-expanded="false"
                 >
-                  <i
-                    className={"fa-solid fa-circle-check px-2 text-success"}
-                  ></i>
+                  <FaCircleCheck className={"text-success"}></FaCircleCheck>
                   Publish All
                 </button>
                 <div
@@ -41,13 +38,14 @@ function ModuleList() {
               </div>
 
               <button className={"btn btn-danger "}>
-                <i className="fa-solid fa-plus text-white"></i> Module
+                <FaPlus className={"text-white"}></FaPlus>
+                Module
               </button>
 
               <button className={"btn btn-light "}>
-                <i
-                  className={"fa-solid fa-ellipsis-vertical text-secondary"}
-                ></i>
+                <FaEllipsisVertical
+                  className={"text-secondary"}
+                ></FaEllipsisVertical>
               </button>
             </div>
           </li>
