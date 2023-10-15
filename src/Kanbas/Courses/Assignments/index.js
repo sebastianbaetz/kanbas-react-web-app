@@ -1,6 +1,13 @@
 import React from "react";
 import { Link, useParams } from "react-router-dom";
 import db from "../../Database";
+import {
+  FaCircleCheck,
+  FaEllipsisVertical,
+  FaFilePen,
+  FaGripVertical,
+  FaPlus,
+} from "react-icons/fa6";
 
 function Assignments() {
   const { courseId } = useParams();
@@ -20,24 +27,24 @@ function Assignments() {
         />
 
         <button className="btn btn-light float-end col-2">
-          <i className="fa-solid fa-plus text-black"></i> Group
+          <FaPlus className={"text-black"}></FaPlus>Group
         </button>
 
         <button className="btn btn-danger float-end col-2">
-          <i className="fa-solid fa-plus text-white"></i> Assignment
+          <FaPlus className={"text-white"}></FaPlus>Assignment
         </button>
 
         <button className="btn btn-light float-end col-1">
-          <i className="fa-solid fa-ellipsis-vertical text-secondary"></i>
+          <FaEllipsisVertical className={"text-secondary"}></FaEllipsisVertical>
         </button>
       </div>
       <button className={"btn btn-light btn-dropdown w-100 text-start"}>
         ASSIGNMENTS
         <button className="float-end btn btn-light">
-          <i className="fa-solid fa-ellipsis-vertical text-secondary"></i>
+          <FaEllipsisVertical className={"text-secondary"}></FaEllipsisVertical>
         </button>
         <button className="btn btn-light float-end">
-          <i className="fa-solid fa-plus text-secondary"></i>
+          <FaPlus className={"text-secondary"}></FaPlus>
         </button>
         <span className="text-black float-end mx-3 px-1 mt-1 border rounded-pill border-dark">
           40% of total
@@ -50,17 +57,22 @@ function Assignments() {
             to={`/Kanbas/Courses/${courseId}/Assignments/${assignment._id}`}
             className="list-group-item"
           >
-            <i className="fa-solid fa-grip-vertical text-secondary"></i>
-            <i className="fa-solid fa-file-pen fa-xl mx-3 pt-2 text-success"></i>
+            <FaGripVertical className={"text-secondary"}></FaGripVertical>
+            <FaFilePen
+              className={"fa-file-pen fa-xl mx-3 pt-2 text-success"}
+            ></FaFilePen>
+
             <span className={""}>
               {assignment.title} | 100 Points | Not available until September
               15th, 2023
             </span>
             <button className="btn btn-light float-end">
-              <i className="fa-solid fa-ellipsis-vertical text-secondary"></i>
+              <FaEllipsisVertical
+                className={"text-secondary"}
+              ></FaEllipsisVertical>
             </button>
             <button className="btn btn-light float-end">
-              <i className="fa-solid fa-circle-check text-success"></i>
+              <FaCircleCheck className={"text-success"}></FaCircleCheck>
             </button>
           </Link>
         ))}
