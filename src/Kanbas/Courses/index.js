@@ -8,6 +8,7 @@ import Modules from "./Modules";
 import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
+import "./index.css";
 
 function Courses() {
   const pathName = window.location.href.split("/").pop();
@@ -15,14 +16,7 @@ function Courses() {
   const course = db.courses.find((course) => course._id === courseId);
   return (
     <div className={"mt-4 mx-4"}>
-      <nav
-        aria-label="breadcrumb"
-        style={
-          {
-            /*TODO FIX BREADCRUMB Separtor*/
-          }
-        }
-      >
+      <nav aria-label="breadcrumb">
         <ol className="breadcrumb">
           <i className="pt-2 fa-solid fa-bars fa-xl text-danger d-inline px-2 "></i>
           <li className="breadcrumb-item d-inline px-2 text-danger">
