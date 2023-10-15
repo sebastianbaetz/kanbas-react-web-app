@@ -1,7 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-//import "https://kit.fontawesome.com/5f3a9d19bd.js";
 import "./index.css";
+import {
+  FaBook,
+  FaCalendar,
+  FaCircleArrowRight,
+  FaCircleQuestion,
+  FaCircleUser,
+  FaClock,
+  FaEnvelopeOpenText,
+  FaGauge,
+  FaMicrochip,
+} from "react-icons/fa6";
 
 function KanbasNavigation() {
   const links = [
@@ -17,16 +27,17 @@ function KanbasNavigation() {
   ];
 
   const icons = [
-    "fa-regular fa-circle-user fa-2xl text-secondary",
-    "fa-solid fa-gauge fa-2xl",
-    "fa-solid fa-book fa-2xl",
-    "fa-regular fa-calendar fa-2xl",
-    "fa-solid fa-envelope-open-text fa-2xl",
-    "fa-regular fa-clock fa-2xl",
-    "fa-solid fa-microchip fa-2xl",
-    "fa-solid fa-circle-arrow-right fa-2xl",
-    "fa-regular fa-circle-question fa-2xl",
+    <FaCircleUser className={"text-secondary"} />,
+    <FaGauge />,
+    <FaBook />,
+    <FaCalendar />,
+    <FaEnvelopeOpenText />,
+    <FaClock />,
+    <FaMicrochip />,
+    <FaCircleArrowRight />,
+    <FaCircleQuestion />,
   ];
+
   const { pathname } = useLocation();
   return (
     <div className="list-group wd-nav-list" style={{ width: 80 }}>
@@ -46,8 +57,7 @@ function KanbasNavigation() {
             pathname.includes(link) && "wd-nav-active"
           }`}
         >
-          <i className={`${icons[index]} "text-center"`}> </i>
-          <br />
+          <div>{icons[index]}</div>
           {link}
         </Link>
       ))}
