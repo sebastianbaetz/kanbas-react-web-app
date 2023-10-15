@@ -28,14 +28,14 @@ function KanbasNavigation() {
 
   const icons = [
     <FaCircleUser className={"text-secondary"} />,
-    <FaGauge />,
-    <FaBook />,
-    <FaCalendar />,
-    <FaEnvelopeOpenText />,
-    <FaClock />,
-    <FaMicrochip />,
-    <FaCircleArrowRight />,
-    <FaCircleQuestion />,
+    <FaGauge className={"text-danger"} />,
+    <FaBook className={"text-danger"} />,
+    <FaCalendar className={"text-danger"} />,
+    <FaEnvelopeOpenText className={"text-danger"} />,
+    <FaClock className={"text-danger"} />,
+    <FaMicrochip className={"text-danger"} />,
+    <FaCircleArrowRight className={"text-danger"} />,
+    <FaCircleQuestion className={"text-danger"} />,
   ];
 
   const { pathname } = useLocation();
