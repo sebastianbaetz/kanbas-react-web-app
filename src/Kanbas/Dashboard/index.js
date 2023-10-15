@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 import db from "../Database";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "https://kit.fontawesome.com/5f3a9d19bd.js";
 import "./index.css";
+import { FaEllipsisVertical, FaFilePen } from "react-icons/fa6";
 
 function Dashboard() {
   const colors = [
@@ -32,13 +32,16 @@ function Dashboard() {
                     colors[index % colors.length]
                   }`}
                 >
-                  <i className="fa-solid fa-ellipsis-vertical text-white fa-xl float-end px-3 py-4"></i>
+                  <FaEllipsisVertical
+                    className={"fa-xl text-white float-end px-3 py-4"}
+                  ></FaEllipsisVertical>
+                  {/*TODO NOT SHOWINGUP*/}
                 </div>
                 <div className={"card-body"}>
                   <h6 className={"card-title"}>{course.number}</h6>
                   <p className={"card-text"}>{course.name}</p>
                   <p className={"card-text"}>{course._id}</p>
-                  <i className="fa-solid fa-file-pen text-secondary"></i>
+                  <FaFilePen className={"text-secondary"}></FaFilePen>
                 </div>
               </div>
             </Link>
