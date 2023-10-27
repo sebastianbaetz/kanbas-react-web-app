@@ -1,4 +1,3 @@
-import db from "../../Kanbas/Database";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { Route, Routes } from "react-router";
 import CourseNavigation from "./CourseNavigation";
@@ -10,10 +9,10 @@ import AssignmentEditor from "./Assignments/AssignmentEditor";
 import "./index.css";
 import { FaBars } from "react-icons/fa6";
 
-function Courses() {
+function Courses({ courses }) {
   const pathName = window.location.href.split("/").pop();
   const { courseId } = useParams();
-  const course = db.courses.find((course) => course._id === courseId);
+  const course = courses.find((course) => course._id === courseId);
   return (
     <div className={"mt-4 mx-4"}>
       <nav aria-label="breadcrumb">

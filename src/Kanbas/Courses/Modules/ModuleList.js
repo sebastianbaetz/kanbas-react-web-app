@@ -1,12 +1,23 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import db from "../../Database";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaCircleCheck, FaEllipsisVertical, FaPlus } from "react-icons/fa6";
+import Accordion from "react-bootstrap/Accordion";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  addModule,
+  deleteModule,
+  setModule,
+  updateModule,
+} from "./modulesReducer";
 
 function ModuleList() {
   const { courseId } = useParams();
-  const modules = db.modules.filter((module) => module.course === courseId);
+  const modules = useSelector((state) => state.modulesReducer.modules);
+  const module = useSelector((state) => state.modulesReducer.module);
+  const dispatch = useDispatch();
+
+  //const modules = db.modules.filter((module) => module.course === courseId);
   return (
     <div>
       <div>
@@ -37,7 +48,12 @@ function ModuleList() {
                 </div>
               </div>
 
-              <button className={"btn btn-danger "}>
+              <button
+                onClick={() =>
+                  dispatch(addModule({ ...module, course: courseId }))
+                }
+                className={"btn btn-danger "}
+              >
                 <FaPlus className={"text-white"}></FaPlus>
                 Module
               </button>
@@ -49,8 +65,73 @@ function ModuleList() {
               </button>
             </div>
           </li>
+          <li>
+            <li className="list-group-item">
+              <Accordion defaultActiveKey="0">
+                <Accordion.Item eventKey="0">
+                  <Accordion.Header>Module Settings</Accordion.Header>
+                  <Accordion.Body>
+                    <div className={"input-group"}>
+                      <input
+                        className={"form-control"}
+                        value={module.name}
+                        onChange={(e) =>
+                          dispatch(
+                            setModule({ ...module, name: e.target.value }),
+                          )
+                        }
+                      />
+                    </div>
+
+                    <div className={"input-group"}>
+                      <textarea
+                        className="form-control"
+                        value={module.description}
+                        onChange={(e) =>
+                          dispatch(
+                            setModule({
+                              ...module,
+                              description: e.target.value,
+                            }),
+                          )
+                        }
+                      />
+                    </div>
+
+                    <button
+                      className={"btn btn-success"}
+                      onClick={() =>
+                        dispatch(addModule({ ...module, course: courseId }))
+                      }
+                    >
+                      Add
+                    </button>
+                    <button
+                      className={"btn btn-secondary"}
+                      onClick={() => dispatch(updateModule(module))}
+                    >
+                      Update
+                    </button>
+                  </Accordion.Body>
+                </Accordion.Item>
+              </Accordion>
+            </li>
+          </li>
           {modules.map((module, index) => (
             <li key={index} className="list-group-item">
+              <button
+                className={"btn btn-danger float-end"}
+                onClick={() => dispatch(deleteModule(module._id))}
+              >
+                Delete
+              </button>
+              <button
+                className={"btn btn-secondary float-end"}
+                onClick={() => dispatch(setModule(module))}
+              >
+                Edit
+              </button>
+
               <h3>{module.name}</h3>
               <p>{module.description}</p>
             </li>
