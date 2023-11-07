@@ -8,11 +8,21 @@ import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import "./index.css";
 import { FaBars } from "react-icons/fa6";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-function Courses({ courses }) {
+function Courses() {
   const pathName = window.location.href.split("/").pop();
   const { courseId } = useParams();
-  const course = courses.find((course) => course._id === courseId);
+  const [course, setCourse] = useState({});
+  const findCourseById = async (courseId) => {
+    const response = await axios.get(`${URL}/${courseId}`);
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   return (
     <div className={"mt-4 mx-4"}>
       <nav aria-label="breadcrumb">

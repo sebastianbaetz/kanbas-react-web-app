@@ -105,7 +105,7 @@ function Dashboard({
                     className={"btn btn-danger float-end"}
                     onClick={(event) => {
                       event.preventDefault();
-                      deleteCourse(course._id);
+                      deleteCourse(course);
                     }}
                   >
                     Delete
