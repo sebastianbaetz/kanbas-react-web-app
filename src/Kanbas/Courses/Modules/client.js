@@ -15,7 +15,7 @@ export const createModule = async (courseId, module) => {
 };
 
 const MODULES_URL =
-  "https://kanbas-node-server-app-cs1234-sp23.onrender.com/api/modules";
+  "https://kanbas-node-server-app-dzet.onrender.com/api/modules";
 
 export const deleteModule = async (moduleId) => {
   const response = await axios.delete(`${MODULES_URL}/${moduleId}`);
