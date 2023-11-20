@@ -3,11 +3,15 @@ import WorkingWithObjects from "./WorkingWithObjects";
 import WorkingWithArrays from "./WorkingWithArrays";
 
 function Assignment5() {
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API = `${API_BASE}/a5`;
+  const APIWelcome = `${API_BASE}/a5/welcome`;
+
   return (
     <div>
       <h1>Assignment 5</h1>
       <div className="list-group">
-        <a href="http://localhost:4000/a5/welcome" className="list-group-item">
+        <a href={APIWelcome} className="list-group-item">
           Welcome
         </a>
       </div>
