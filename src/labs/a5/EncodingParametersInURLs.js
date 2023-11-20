@@ -7,6 +7,7 @@ function EncodingParametersInURLs() {
   const [result, setResult] = useState(0);
   const API_BASE = process.env.REACT_APP_API_BASE;
   const API = `${API_BASE}/a5`;
+  //test
   const fetchSum = async (a, b) => {
     const response = await axios.get(`${API}/add/${a}/${b}`);
     setResult(response.data);
