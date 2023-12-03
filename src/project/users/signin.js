@@ -12,9 +12,9 @@ function Signin() {
     return (
         <div>
             <h1>Signin</h1>
-            <input className={''} value={credentials.username} onChange={(e) => setCredentials({...credentials, username: e.target.value})}/>
-            <input className={''} value={credentials.password} onChange={(e) => setCredentials({...credentials, password: e.target.value})}/>
-            <button onClick={signin}> Signin </button>
+            <input className={'form-control w-25'} placeholder={'Username'} value={credentials.username} onChange={(e) => setCredentials({...credentials, username: e.target.value})}/>
+            <input className={'form-control w-25'} placeholder={'Password'} value={credentials.password} onChange={(e) => setCredentials({...credentials, password: e.target.value})}/>
+            <button className={'btn btn-primary'} onClick={signin}> Signin </button>
         </div>
     );
 }

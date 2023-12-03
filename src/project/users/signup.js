@@ -20,16 +20,20 @@ function Signup() {
             <h1>Signup</h1>
             {error && <div>{error}</div>}
             <input
+                className={'form-control w-25'}
+                placeholder={'Username'}
                 value={credentials.username}
                 onChange={(e) => setCredentials({
                     ...credentials,
                     username: e.target.value })} />
             <input
+                className={'form-control w-25'}
+                placeholder={'Password'}
                 value={credentials.password}
                 onChange={(e) => setCredentials({
                     ...credentials,
                     password: e.target.value })} />
-            <button onClick={signup}>
+            <button className={'btn btn-primary'} onClick={signup}>
                 Signup
             </button>
         </div>
