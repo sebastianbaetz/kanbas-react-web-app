@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 
 function EncodingParametersInURLs() {
   const [a, setA] = useState(34);
   const [b, setB] = useState(23);
   const [result, setResult] = useState(0);
-  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000";
   const API = `${API_BASE}/a5`;
   //test
   const fetchSum = async (a, b) => {

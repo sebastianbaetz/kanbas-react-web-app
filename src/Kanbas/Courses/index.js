@@ -1,5 +1,5 @@
-import { Link, Navigate, useParams } from "react-router-dom";
-import { Route, Routes } from "react-router";
+import {Link, Navigate, useParams} from "react-router-dom";
+import {Route, Routes} from "react-router";
 import CourseNavigation from "./CourseNavigation";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Modules from "./Modules";
@@ -7,18 +7,18 @@ import Home from "./Home";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 import "./index.css";
-import { FaBars } from "react-icons/fa6";
+import {FaBars} from "react-icons/fa6";
 import axios from "axios";
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 
 function Courses() {
   const pathName = window.location.href.split("/").pop();
   const { courseId } = useParams();
   const [course, setCourse] = useState({});
   //const URL = "http://localhost:4000/api/courses";
-  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000";
   const URL = `${API_BASE}/api/courses`;
-  const findCourseById = async (courseId) => {
+    const findCourseById = async (courseId) => {
     const response = await axios.get(`${URL}/${courseId}`);
     setCourse(response.data);
   };

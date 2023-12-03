@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import axios from "axios";
 
 function WorkingWithObjects() {
@@ -10,7 +10,7 @@ function WorkingWithObjects() {
     completed: false,
     score: 0,
   });
-  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000";
   const URL = `${API_BASE}/a5/assignment`;
   const URLTitle = `${API_BASE}/a5/assignment/title`;
   //const URL = "http://localhost:4000/a5/assignment";

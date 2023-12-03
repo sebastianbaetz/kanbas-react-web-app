@@ -1,8 +1,8 @@
-import { useEffect, useState } from "react";
+import {useEffect, useState} from "react";
 import axios from "axios";
 
 function WorkingWithArrays() {
-  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000";
   const API = `${API_BASE}/a5/todos`;
   const [todo, setTodo] = useState({
     id: 1,

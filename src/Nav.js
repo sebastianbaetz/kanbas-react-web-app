@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import {Link, useLocation} from "react-router-dom";
 
 function Nav() {
   const { pathname } = useLocation();
@@ -24,11 +24,15 @@ function Nav() {
         Hello
       </Link>
       <Link
-        to="/Kanbas"
+        to="/Kanbas" //TODO
         className={`nav-link ${pathname.includes("Kanbas") ? "active" : ""}`}
       >
         Kanbas
       </Link>
+        <Link
+        to="/project"
+        className={`nav-link ${pathname.includes("project") ? "active" : ""}`}
+        >Project (A6)</Link>
     </nav>
   );
 }

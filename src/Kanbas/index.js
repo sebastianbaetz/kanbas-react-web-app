@@ -1,9 +1,9 @@
 import KanbasNavigation from "./KanbasNavigation";
-import { Navigate, Route, Routes } from "react-router-dom";
+import {Navigate, Route, Routes} from "react-router-dom";
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
-import { useEffect, useState } from "react";
-import { Provider } from "react-redux";
+import {useEffect, useState} from "react";
+import {Provider} from "react-redux";
 import store from "./store";
 import axios from "axios";
 
@@ -16,7 +16,7 @@ function Kanbas() {
   };
   const [courses, setCourses] = useState([]);
   //const URL = "http://localhost:4000/api/courses";
-  const API_BASE = process.env.REACT_APP_API_BASE;
+  const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000";
   const URL = `${API_BASE}/api/courses`;
   const findAllCourses = async () => {
     const response = await axios.get(URL);
